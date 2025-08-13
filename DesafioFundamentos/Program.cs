@@ -32,11 +32,17 @@ while (exibirMenu)
     switch (Console.ReadLine())
     {
         case "1":
-            es.AdicionarVeiculo();
+            Console.WriteLine("Digite a placa do veículo para estacionar:");
+            string placaAdicionar = Console.ReadLine();
+            
+            es.AdicionarVeiculo(placaAdicionar);
             break;
 
         case "2":
-            es.RemoverVeiculo();
+            Console.WriteLine("Digite a placa do veículo para remover:");
+            string placaRemover = Console.ReadLine()?.Trim();
+            
+            es.RemoverVeiculo(placaRemover);
             break;
 
         case "3":
